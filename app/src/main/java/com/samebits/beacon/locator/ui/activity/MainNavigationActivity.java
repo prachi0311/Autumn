@@ -69,8 +69,8 @@ public class MainNavigationActivity extends BaseActivity
     @BindView(R.id.fab)
     FloatingActionButton fab;
 
-    @BindView(R.id.drawer_layout)
-    DrawerLayout drawer;
+//    @BindView(R.id.drawer_layout)
+//    DrawerLayout drawer;
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -152,12 +152,12 @@ public class MainNavigationActivity extends BaseActivity
             ab.setDisplayHomeAsUpEnabled(true);
         }
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar,
-                R.string.nav_drawer_open,
-                R.string.nav_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar,
+//                R.string.nav_drawer_open,
+//                R.string.nav_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
     }
 
@@ -252,11 +252,11 @@ public class MainNavigationActivity extends BaseActivity
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
             super.onBackPressed();
-        }
+       // }
     }
 
 
@@ -280,7 +280,7 @@ public class MainNavigationActivity extends BaseActivity
                 break;
         }
 
-        drawer.closeDrawer(GravityCompat.START);
+        //drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
@@ -400,6 +400,10 @@ public class MainNavigationActivity extends BaseActivity
     @Override
     public void onBeaconSelected(TrackedBeacon beacon) {
         mSelectedBeacon = beacon;
+        Log.i("selected Beacon",mSelectedBeacon.getUUID());
+//        Intent i=new Intent(MainNavigationActivity.this,InformationPoPUp.class);
+//        i.putExtra("beaconUUID",mSelectedBeacon.getUUID());
+       // startActivity(i);
         launchTrackedListView();
     }
 }

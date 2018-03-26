@@ -11,7 +11,7 @@
     <color name="super_light_grey">#FAFAFA</color>
     <color name="line_grey">#D7D7D7</color>
     <color name="black_87pc">#DD000000</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#323299</color>
+    <color name="colorPrimaryDark">#1E1E5B</color>
+    <color name="colorAccent">#4a4a7b</color>
 </resources>

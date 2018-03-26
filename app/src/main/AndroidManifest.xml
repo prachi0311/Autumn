@@ -5,9 +5,9 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="net.dinglisch.android.tasker.PERMISSION_RUN_TASKS" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
@@ -22,20 +22,14 @@
         <activity
             android:name=".ui.activity.MainNavigationActivity"
             android:label="@string/title_activity_main_navigation"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".ui.activity.SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity
             android:name=".ui.activity.BeaconActionActivity"
-            android:label="@string/title_activity_beacon"
-            />
+            android:label="@string/title_activity_beacon" />
+
         <receiver android:name=".receiver.BeaconRegionReceiver">
             <intent-filter>
                 <action android:name="${applicationId}.action.NOTIFY_BEACON_ENTERS_REGION" />
@@ -50,11 +44,20 @@
         </receiver>
         <receiver android:name=".receiver.LocationReceiver">
             <intent-filter>
-                <action android:name="${applicationId}.action.GET_CURRENT_LOCATION"/>
+                <action android:name="${applicationId}.action.GET_CURRENT_LOCATION" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".ui.activity.InformationPoPUp" />
+        <activity
+            android:name=".ui.activity.StartingActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
-
-
 
 </manifest>

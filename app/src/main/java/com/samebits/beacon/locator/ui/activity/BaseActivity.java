@@ -58,18 +58,18 @@ public class BaseActivity extends AppCompatActivity {
                     finish();
                 }
                 return true;
-            case R.id.action_settings:
-                launchSettingsActivity();
-                return true;
-            case R.id.action_view_on_github:
-                launchGitHubPage();
-                return true;
-            case R.id.action_help:
-                launchHelpPage();
-                return true;
-            case R.id.action_donate:
-                launchDonatePage();
-                return true;
+//            case R.id.action_settings:
+//                launchSettingsActivity();
+//                return true;
+//            case R.id.action_view_on_github:
+//                launchGitHubPage();
+//                return true;
+//            case R.id.action_help:
+//                launchHelpPage();
+//                return true;
+//            case R.id.action_donate:
+//                launchDonatePage();
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

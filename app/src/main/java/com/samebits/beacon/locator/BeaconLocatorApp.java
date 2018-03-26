@@ -194,6 +194,7 @@ public class BeaconLocatorApp extends Application implements BootstrapNotifier, 
             if (regName.getEventType() == ActionBeacon.EventType.EVENT_NEAR_YOU) {
                 try {
                     mBeaconManager.startRangingBeaconsInRegion(region);
+                    Log.i("beacon name","test");
                 } catch (RemoteException e) {
                     Log.e(Constants.TAG, "Error start ranging region: " + regName, e);
                 }
